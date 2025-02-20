@@ -28,6 +28,7 @@ const RestaurantHeader = ({ restaurant }: RestaurantHeaderProps) => {
         src={restaurant.coverImageUrl}
         alt={restaurant.name}
         fill
+        priority
         className="object-cover"
       />
       <Button
