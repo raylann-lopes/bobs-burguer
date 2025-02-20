@@ -19,7 +19,7 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
       <Button
         variant="secondary"
         size="icon"
-        className="rounded-full absolute top-4 left-4 z-50"
+        className="absolute left-4 top-4 z-50 rounded-full"
         onClick={handleBackClick}
       >
         <ChevronLeftIcon />
@@ -34,7 +34,7 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
       <Button
         variant="secondary"
         size="icon"
-        className="rounded-full absolute top-4 right-4 z-50"
+        className="absolute right-4 top-4 z-50 rounded-full"
       >
         <ScrollTextIcon />
       </Button>
