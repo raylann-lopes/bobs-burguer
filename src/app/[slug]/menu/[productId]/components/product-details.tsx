@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { formatCurrency } from "@/helpers/format-currency";
 
 interface ProductDetailsProps {
@@ -77,21 +78,30 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
             </Button>
           </div>
         </div>
-        {/* Sobre */}
 
-        <div className="mt-6 space-y-3">
-          <h4 className="font-semibold">Sobre</h4>
-          <p className="text-sm text-muted-foreground">{product.description}</p>
-        </div>
+        <ScrollArea className="h-full">
+          {/* Sobre */}
 
-        {/* Ingredientes */}
-        <div className="mt-6 space-y-3">
-          <div className="5 flex items-center gap-1.5">
-            <ChefHatIcon size={18} />
-            <h4 className="font-semibold">Ingredientes</h4>
+          <div className="mt-6 space-y-3">
+            <h4 className="font-semibold">Sobre</h4>
+            <p className="text-sm text-muted-foreground">
+              {product.description}
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground">{product.ingredients}</p>
-        </div>
+
+          {/* Ingredientes */}
+          <div className="mt-6 space-y-3">
+            <div className="5 flex items-center gap-1.5">
+              <ChefHatIcon size={18} />
+              <h4 className="font-semibold">Ingredientes</h4>
+            </div>
+            <ul className="list-disc px-5 text-sm text-muted-foreground">
+              {product.ingredients.map((ingredient) => (
+                <li key={ingredient}>{ingredient}</li>
+              ))}
+            </ul>
+          </div>
+        </ScrollArea>
       </div>
       <Button className="mt-6 w-full rounded-full"> Adicionar à sacola</Button>
     </div>
