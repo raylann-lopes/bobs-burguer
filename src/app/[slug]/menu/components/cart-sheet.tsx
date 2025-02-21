@@ -20,6 +20,7 @@ const CartSheet = () => {
     <div key={product.id}>
       <p>{product.name}</p>
       <p>{product.price}</p>
+      <p>{product.quantity}</p>
     </div>
   ))}
 </SheetContent>
