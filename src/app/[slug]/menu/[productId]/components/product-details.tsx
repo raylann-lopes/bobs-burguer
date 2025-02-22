@@ -121,7 +121,7 @@ const ProductDetails = ({ product }: ProductDetailsProps) => {
           Adicionar à sacola
         </Button>
       </div>
-        <CartSheet />
+      <CartSheet />
     </>
   );
 };
