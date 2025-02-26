@@ -1,3 +1,4 @@
+import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -21,6 +22,11 @@ const RestaurantPage = async ({ params }: RestaurantPageProps) => {
 
   return (
     <div className="flex h-screen flex-col items-center justify-center px-6 pt-24">
+      <div className="absolute top-3 flex w-full justify-end px-6 pt-6">
+        <UserButton />
+        <p></p>
+      </div>
+
       {/* Logo e Titulo */}
       <div className="flex flex-col items-center gap-2">
         <Image
