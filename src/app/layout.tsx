@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
@@ -23,12 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.className}antialiased`}>
-        <CartProvider>{children}</CartProvider>
-
-        <Toaster />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${poppins.className}antialiased`}>
+          <CartProvider>{children}</CartProvider>
+          <Toaster />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
