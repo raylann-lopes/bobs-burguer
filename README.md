@@ -89,6 +89,14 @@ Durante o desenvolvimento do Bob's Burguer, enfrentei diversos desafios que cont
 
 **Solução**: Dividi as funcionalidades em tarefas menores e implementei cada uma de forma modular. Utilizei o Context API do React para gerenciar o estado global e assegurei a consistência dos dados através de validações e testes abrangentes.​
 
+### 7. Integração com Stripe para Pagamento
+**Desafio**: Integrar uma solução de pagamento como o **Stripe** foi um dos maiores desafios. A configuração da API do Stripe, especialmente para realizar pagamentos de forma segura e eficiente, exigiu um entendimento completo do processo de checkout e da gestão de tokens de pagamento.
+
+**Solução**: Estudei a documentação do Stripe e implementei a integração utilizando a biblioteca `stripe` do Node.js. Criei uma rota no servidor para gerar um *checkout session* com o Stripe, permitindo ao usuário finalizar o pagamento no ambiente do Stripe. Também adicionei validações de segurança para garantir que os dados do pagamento fossem processados corretamente. A solução foi testada com cartões de teste fornecidos pelo Stripe e verifiquei o sucesso da transação através do painel de administração do Stripe. Além disso, utilizei o método de "Webhooks" do Stripe para gerenciar notificações de sucesso ou falha nos pagamentos.
+
+A integração com o Stripe foi concluída com sucesso, proporcionando uma forma de pagamento segura e confiável para os usuários realizarem seus pedidos de forma prática.
+
+
 Esses desafios proporcionaram um aprendizado significativo e contribuíram para o aprimoramento das minhas habilidades no desenvolvimento web.
 
 ## 🚀 Instalação
