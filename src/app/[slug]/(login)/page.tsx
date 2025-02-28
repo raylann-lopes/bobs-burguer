@@ -13,14 +13,10 @@ interface LoginPageProps {
 
 const LoginPage = async ({ params }: LoginPageProps) => {
   const { slug } = await params;
-
   const { userId } = await auth();
+
   if (userId) {
     return redirect(`/${slug}`);
-  }
-  if (!userId) {
-    return redirect(`
-    /${slug}/login`);
   }
 
   return (
